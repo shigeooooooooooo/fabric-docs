@@ -1,6 +1,6 @@
 ---
-title: Process event data with the event processor editor
-description: Learn how to use the event processor editor in an Eventstream item to define the event processing logic.
+title: Process event data with the event processing editor
+description: Learn how to use the event processing editor in an Eventstream item to define the event processing logic.
 ms.reviewer: spelluru
 ms.author: xujiang1
 author: xujxu
@@ -10,9 +10,9 @@ ms.date: 05/23/2023
 ms.search.form: product-kusto
 ---
 
-# Process event data with event processor editor
+# Process event data with event processing editor
 
-The event processor in a Lakehouse destination allows you to process your data before it's ingested into your lakehouse. The event processor editor is a no-code experience that allows you to drag and drop to design the event data processing logic. This article describes how to use the editor to design your processing logic.
+The event processing editor in a Lakehouse destination allows you to process your data before it's ingested into your lakehouse. The event processing editor is a no-code experience that allows you to drag and drop to design the event data processing logic. This article describes how to use the editor to design your processing logic.
 
 [!INCLUDE [preview-note](../../includes/preview-note.md)]
 
@@ -25,7 +25,7 @@ Before you start, you must complete the following prerequisites:
 
 ## Design the event processing with the editor
 
-To design your event processing with the event processor editor:
+To design your event processing with the event processing editor:
 
 1. Add a **Lakehouse** destination and enter the necessary parameters in the right pane. (See [Add and manage a destination in an eventstream](./add-manage-eventstream-destinations.md) for detailed instructions. )
 
@@ -55,25 +55,25 @@ To design your event processing with the event processor editor:
 
 1. After you have configured the **Manage fields** operator, select **Refresh static preview** to preview the data this operator produces.
 
-   :::image type="content" source="./media/process-events-using-event-processor-editor/event-processor-editor-preview.png" alt-text="Screenshot showing how to preview data in the event processor editor." lightbox="./media/process-events-using-event-processor-editor/event-processor-editor-preview.png" :::
+   :::image type="content" source="./media/process-events-using-event-processor-editor/event-processor-editor-preview.png" alt-text="Screenshot showing how to preview data in the event processing editor." lightbox="./media/process-events-using-event-processor-editor/event-processor-editor-preview.png" :::
 
 1. If you have any configuration errors, they appear in the **Authoring error** tab in the bottom pane.
 
-   :::image type="content" source="./media/process-events-using-event-processor-editor/event-processor-editor-authoring-error.png" alt-text="Screenshot showing the authoring error tab in event processor editor." lightbox="./media/process-events-using-event-processor-editor/event-processor-editor-authoring-error.png" :::
+   :::image type="content" source="./media/process-events-using-event-processor-editor/event-processor-editor-authoring-error.png" alt-text="Screenshot showing the authoring error tab in event processing editor." lightbox="./media/process-events-using-event-processor-editor/event-processor-editor-authoring-error.png" :::
 
 1. If your previewed data looks correct, select **Done** to save the event processing logic and return to the Lakehouse destination configuration screen.
 
 1. Select **Add** to complete the creation of your lakehouse destination.
 
-## Event processor editor
+## Event processing editor
 
 The Event processor enables you to transform the data that you're ingesting into a lakehouse destination. When you configure your lakehouse destination, you find the **Open event processor** option in the middle of the **Lakehouse** destination configuration screen.
 
-:::image type="content" source="./media/process-events-using-event-processor-editor/event-processor-editor-entrypoint.png" alt-text="Screenshot showing where to open the event processor editor." lightbox="./media/event-processor-editor/event-processor-editor-entrypoint.png" :::
+:::image type="content" source="./media/process-events-using-event-processor-editor/event-processor-editor-entrypoint.png" alt-text="Screenshot showing where to open the event processing editor." lightbox="./media/event-processor-editor/event-processor-editor-entrypoint.png" :::
 
 Selecting **Open event processor** launches the **Event processing editor** screen, where you can define your data transformation logic.
 
-The event processor editor includes a canvas and lower pane where you can:
+The event processing editor includes a canvas and lower pane where you can:
 
 - Build the event data transformation logic with drag and drop.
 - Preview the data in each of the processing nodes from beginning to end.
@@ -91,7 +91,7 @@ The screen layout is like the main editor. It consists of three sections, shown 
 
 ## Transformation operators
 
-The event processor provides six operators, which you can use to transform your event data according to your business needs.
+The event processing editor provides six operators, which you can use to transform your event data according to your business needs.
 
 :::image type="content" source="./media/event-processor-editor/event-processor-editor-operators.png" alt-text="Screenshot showing the operators available to in the Operations menu.":::
 
@@ -122,9 +122,9 @@ The aggregations available in the transformation are:
 - Sum
 - Variance
 
-In time-streaming scenarios, performing operations on the data contained in temporal windows is a common pattern. The event processor supports **windowing functions**, which is integrated with the **Group by** operator. You can define it in the setting of this operator.
+In time-streaming scenarios, performing operations on the data contained in temporal windows is a common pattern. The event processing editor supports **windowing functions**, which is integrated with the **Group by** operator. You can define it in the setting of this operator.
 
-:::image type="content" source="./media/event-processor-editor/event-processor-editor-operators-group-by.png" alt-text="Screenshot showing the Group by operator available in the event processor editor." lightbox="./media/event-processor-editor/event-processor-editor-operators-group-by.png" :::
+:::image type="content" source="./media/event-processor-editor/event-processor-editor-operators-group-by.png" alt-text="Screenshot showing the Group by operator available in the event processing editor." lightbox="./media/event-processor-editor/event-processor-editor-operators-group-by.png" :::
 
 ### Manage fields
 
@@ -132,7 +132,7 @@ The **Manage fields** transformation allows you to add, remove, or rename fields
 
 You can also add a new field with the built-in functions to aggregate the data from upstream. (Currently, the built-in functions we support are some functions in **String Functions**, **Date and Time Functions**, and **Mathematical Functions**. To find them, search on "built-in.")
 
-:::image type="content" source="./media/event-processor-editor/event-processor-editor-manage-field.png" alt-text="Screenshot showing the Manage field operator available in the event processor editor." :::
+:::image type="content" source="./media/event-processor-editor/event-processor-editor-manage-field.png" alt-text="Screenshot showing the Manage field operator available in the event processing editor." :::
 
 ### Union
 
